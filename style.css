@@ -1,0 +1,115 @@
+/*
+ * Estilos para la temática greco-romana
+ * Fuentes: 'Playfair Display' para títulos, 'Merriweather' para el cuerpo.
+ * Colores: Mármol, terracota, azul profundo.
+ */
+
+/* Importación de fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Estilos del cuerpo de la página */
+body {
+    /* Color de fondo que simula mármol o piedra */
+    background-color: #fbf8f0; 
+    color: #333333; /* Texto oscuro para buena legibilidad */
+    font-family: 'Merriweather', serif; /* Fuente con serifa para el cuerpo */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Estilos para el contenedor principal, simulando un bloque de mármol */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para el contenido */
+    border: 4px solid #b88a00; /* Borde dorado simulando un marco antiguo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center;
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante y pesada para el título */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.8em;
+    color: #2b3f68; /* Azul profundo para el título */
+    margin-top: 0;
+    border-bottom: 2px solid #d36a5b; /* Línea roja terracota debajo del título */
+    padding-bottom: 15px;
+    display: inline-block; /* Para que la línea se ajuste al ancho del texto */
+}
+
+/* Estilos para el contenedor del video */
+#video-container {
+    width: 90%;
+    max-width: 960px;
+    margin: 30px auto;
+    background-color: #000;
+    border: 2px solid #333333;
+}
+
+/* Estilos responsivos para que el video se adapte */
+iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto 16:9 */
+}
+
+/* Estilos para los mensajes de la narrativa */
+.narrative-text {
+    font-size: 1.2em;
+    color: #5c4a30;
+    margin-top: 20px;
+}
+
+/* Estilos para dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    .container {
+        margin: 20px 10px;
+    }
+    #video-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/* --- Estilos para el botón de inicio --- */
+
+.boton-inicio {
+    /* Estilo de la tipografía */
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    /* Apariencia del botón */
+    display: inline-block;
+    padding: 15px 40px;
+    margin-top: 30px;
+    text-decoration: none; /* Quita el subrayado del enlace */
+
+    /* Colores y bordes */
+    background-color: transparent;
+    color: #2b3f68; /* El azul profundo de los títulos */
+    border: 3px solid #d36a5b; /* Borde rojo terracota */
+    
+    transition: all 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto al pasar el mouse por encima */
+.boton-inicio:hover {
+    background-color: #d36a5b;
+    color: #ffffff; /* El texto se vuelve blanco */
+    border-color: #d36a5b;
+}
+
+/* Efecto al hacer click (activo) */
+.boton-inicio:active {
+    transform: translateY(2px); /* Baja ligeramente el botón al presionarlo */
+}
