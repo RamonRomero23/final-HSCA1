@@ -121,7 +121,7 @@ iframe {
 }
 
 #qr-container img {
-    width: 200px; /* Tamaño del QR, ajústalo como necesites */
+    width: 400px; /* Tamaño del QR, ajústalo como necesites */
     height: auto;
     border: 4px solid #b88a00; /* Borde dorado como acento */
     padding: 5px;
