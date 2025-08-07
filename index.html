@@ -37,7 +37,7 @@
 
     <div id="video-container">
         <iframe id="player"
-            src="https://www.youtube.com/embed/_YDAfUvb6jQ?enablejsapi=1"
+            src="https://www.youtube.com/embed/m9iPdKXKTm4?enablejsapi=1"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
@@ -48,11 +48,11 @@
         <img src="QR.jpeg" alt="Código QR ">
     </div>
 
-    <!--<a href="final.html" class="boton-inicio">
-            Ver "Conclusión"
-    </a>-->
+    <a href="https://orestes.vercel.app/admin" class="boton-inicio">
+            Ver resultados
+    </a>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
+    <!--<script src="https://www.youtube.com/iframe_api"></script>
     <script>
         let player;
         const REDIRECT_URL = 'https://orestes.vercel.app/admin'; // REEMPLAZA ESTO CON LA URL REAL
@@ -67,15 +67,15 @@
         }
 
         // La función que se ejecuta cada vez que el estado del video cambia
-        function onPlayerStateChange(event) {
+           // function onPlayerStateChange(event) {
             // El estado 0 es "ended" (terminado)
-            if (event.data === YT.PlayerState.ENDED) {
+            //if (event.data === YT.PlayerState.ENDED) {
                 console.log("El video ha terminado. Redirigiendo...");
                 
                 // Redirige a la nueva página
                 window.location.href = REDIRECT_URL;
             }
-        }
-    </script>
+        //}
+    </script>-->
 </body>
 </html>
