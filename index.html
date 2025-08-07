@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tragedia en Caballito</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        #video-container {
+            width: 80%;
+            max-width: 1280px;
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tragedia en Caballito</h1>
+
+    <div id="video-container">
+        <iframe id="player"
+            src="https://www.youtube.com/embed/_YDAfUvb6jQ?enablejsapi=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div id="qr-container">
+        <img src="qr.jpg" alt="Código QR">
+    </div>
+
+    <!--<a href="final.html" class="boton-inicio">
+            Ver "Conclusión"
+    </a>*-->
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        let player;
+        const REDIRECT_URL = 'https://orestes.vercel.app/admin'; // REEMPLAZA ESTO CON LA URL REAL
+
+        // La función que se ejecutará cuando la API de YouTube esté lista
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        // La función que se ejecuta cada vez que el estado del video cambia
+        function onPlayerStateChange(event) {
+            // El estado 0 es "ended" (terminado)
+            if (event.data === YT.PlayerState.ENDED) {
+                console.log("El video ha terminado. Redirigiendo...");
+                
+                // Redirige a la nueva página
+                window.location.href = REDIRECT_URL;
+            }
+        }
+    </script>
+
+</body>
+</html>
