@@ -113,3 +113,16 @@ iframe {
 .boton-inicio:active {
     transform: translateY(2px); /* Baja ligeramente el botón al presionarlo */
 }
+
+/* Estilos para el contenedor del QR */
+#qr-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#qr-container img {
+    width: 200px; /* Tamaño del QR, ajústalo como necesites */
+    height: auto;
+    border: 4px solid #b88a00; /* Borde dorado como acento */
+    padding: 5px;
+}
